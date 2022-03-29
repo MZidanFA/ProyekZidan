@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    
+}
+*::before {
+    box-sizing: border-box;
+}
+*::after {
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+.calculator {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    width: 400px
+}
+body {
+    transition: background 0.4s linear;
+}
+.calculator-screen {
+    width: 100%;
+    height: 120px;
+    background-color: #72b2e4;
+    color: black;
+    text-align: right;
+    font-size: 36px;
+    border: none;
+    border-radius: 15px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.calculator-keys {
+    width: 100%;
+    padding-top: 4px;
+}
+.row {
+    display: flex;
+}
+button {
+    height: 80px;
+    background-color: #f6f7fb;
+    border: 1px solid #f6f7fb;
+    font-size: 32px;
+    color: black;
+    width: 25%;
+    outline: none;
+    border-radius: 35px;
+    margin: 3px;
+}
+button:active{
+    border-radius: 15px;
+}
+.zero-btn {
+    width: 50%;
+}
+.all-clear {
+    width: 50%;
+    background-color: #c3eed0;
+}
+.all-clear:hover {
+    background-color: #aacfb4;
+}
+.operator {
+    background-color: #c3e7ff;
+}
+.operator:hover {
+    background-color: #afcee2;
+}
+.equal-sign {
+    background-color: #d3e3fd;
+}
+.equal-sign:hover {
+    background-color: #afbcd1;
+}
+button:hover {
+    background-color: lightcyan;
+}
+
+/*darkmode*/
+body.dark {
+    background-color: #1f1f1f ;
+}
+body.dark p {
+    color: #1f1f1f;
+}
+body.dark .calculator-screen {
+    background-color: #e9effb;
+}
+body.dark button {
+    background-color: rgba(41,42,46,255);
+    color: white;
+    border: none;
+}
+body.dark .all-clear {
+    background-color: #c3eed0;
+    color: black;
+}
+body.dark .operator {
+    background-color: #5ab2f1;
+}
+body.dark .equal-sign {
+    background-color: #d3e3fd;
+}
+body.dark .all-clear:hover {
+    background-color: #cfffdc;
+}
+body.dark .operator:hover {
+    background-color: #75b0d8;
+}
+body.dark .equal-sign:hover {
+    background-color: #afbcd1;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute
+}
+.checkbox:checked + .label .ball {
+    transform: translatex(24px)
+}
+label {
+    display: flex;
+    position: relative;
+    background-color: #2d2b2b;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+label .fa-moon {
+    color: #f1c40f;
+}
+label .fa-sun {
+    color: #f39c12;
+}
+label .ball {
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50px;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s linear;
+}
